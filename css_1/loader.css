@@ -1,0 +1,178 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+
+@-webkit-keyframes light1move {
+  0%, 100% {
+    -webkit-transform: skew(22deg);
+  }
+  50% {
+    -webkit-transform: skew(-16deg);
+    border-bottom-width: 160px;
+  }
+}
+
+@-webkit-keyframes light1concmove {
+  0%, 100% {
+    left: 88px;
+  }
+  50% {
+    left: -29px;
+    margin-top:-10px;
+  }
+}
+
+@-webkit-keyframes light2move {
+  0%, 100% {
+  }
+  50% {
+    border-bottom-width: 170px;
+  }
+}
+
+@-webkit-keyframes loadingpulse {
+  0%, 100% {
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes light3move {
+  0%, 100% {
+    -webkit-transform: skew(-22deg);
+  }
+  50% {
+    -webkit-transform: skew(16deg);
+  }
+}
+
+@-webkit-keyframes light3concmove {
+  0%, 100% {
+    left: -68px;
+  }
+  50% {
+    left: 49px;
+    margin-top: -10px;
+  }
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #2b4453;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.lights {
+  width: 280px;
+  height: 180px;
+  margin: 20px auto;
+}
+.light {
+  float: left;
+  width: 10px;
+  height: 10px;
+  opacity: 0.9;
+  -webkit-transform-origin: 0 0;
+  margin: 0 20px;
+}
+.light1 {
+  border-bottom: 160px solid #3bbde1;
+  -webkit-transform: skew(30deg,0);
+  border-left: 50px solid transparent;
+  border-right: 20px solid transparent;
+  -webkit-animation: light1move 3s infinite;
+  z-index: 1;
+}
+.light2 {
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 160px solid #ed65cd;
+  margin-left: -30px;
+  -webkit-animation: light2move 3s infinite;
+  z-index: 99;
+}
+.light3 {
+  margin-left: -30px;
+  border-bottom: 160px solid #9fdb33;
+  -webkit-transform: skew(-30deg,0);
+  border-left: 20px solid transparent;
+  border-right: 50px solid transparent;
+  -webkit-animation: light3move 3s infinite;
+  z-index: 1;
+}
+
+.conc_group {
+   clear: both;
+}
+
+.conc {
+   width: 80px;
+   height: 20px;
+   position: relative;
+   border-radius: 100%;
+   opacity: 0.75;
+   top: -10px;
+   float: left;
+}
+
+.light1_conc {
+   background-color: #8bf8ff;
+   left: 0px;
+   -webkit-animation: light1concmove 3s infinite;
+   z-index: 0;
+}
+
+.light2_conc {
+   background-color: #ecc2c3;
+   left: 10px;
+  z-index: 99;
+}
+
+.light3_conc {
+  background-color:#91c57f;
+  left: 100px;
+  -webkit-animation: light3concmove 3s infinite;
+  z-index: 0;
+}
+
+.co_name {
+  color: white;
+  font-family: 'Yanone Kaffeesatz', Helvetica,       Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  position: relative;
+  top: -120px;
+  text-align: center;
+  text-shadow: 0 2px 5px #333;
+  width: 40px;
+  z-index: 100;
+  margin: 0 auto;
+  width: 154px;
+}
+
+.load_msg {
+  color: white;
+  font-family: 'Yanone Kaffeesatz', Helvetica,       Arial, sans-serif;
+  font-size: 18px;
+  z-index: 100;
+  margin: 0 auto;
+  position: relative;
+  top: -120px;
+  text-align: center;
+  text-shadow: 0 2px 5px #333;
+  -webkit-animation: loadingpulse 1.5s infinite;
+}
+
+.ground {
+  width: 100%;
+  background-color: #3e7495;
+  height: 50px;
+  bottom: 0;
+  float: left;
+  margin-top: -140px;
+}
